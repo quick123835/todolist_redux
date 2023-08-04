@@ -6,6 +6,9 @@ import styles from './App.module.scss'
 import './reset.css'
 
 function App() {
+  const day = new Date()
+  const today = `${day.getFullYear()}-${day.getMonth()+1}-${day.getDate()}`
+
   const dispatch = useDispatch()
   const inputValue = useSelector((state) => state.inputReducer)
   const dateValue = useSelector((state) => state.dateReducer)
@@ -15,6 +18,7 @@ function App() {
     if(e.key === 'Enter' && e.target.value.trim() !== ''){
       dispatch(addTodo(inputValue,dateValue))
       dispatch(inputChange(''))
+      dispatch(dateChange(today))
     }
   }
 
@@ -31,7 +35,6 @@ function App() {
   }
 
   const handleDateChange = (e) => {
-    console.log(typeof(e.target.value))
     dispatch(dateChange(e.target.value))
   }
 
