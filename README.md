@@ -1,4 +1,4 @@
-# ✨ 買賣力道比例基地
+# ✨ react-redux-todolist 練習
 
 ## 頁面截圖：
 
