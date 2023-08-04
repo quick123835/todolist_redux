@@ -26,6 +26,9 @@
         outline:none;
         border-bottom: 1px solid gray;
     }
+    input[type=date]{
+        width: 30%;
+    }
     button{
         border-radius: 5px;
         height: 40px;

@@ -5,14 +5,22 @@ export const inputChange = (value) => {
     }
 }
 
-export const addTodo = (value) => {
+export const dateChange = (value) => {
+    return{
+        type: 'dateChange' ,
+        date: value
+    }
+}
+
+export const addTodo = (inputValue,dateValue) => {
     return{
         type: 'addTodo', 
         payload: {
             id: Math.floor(Math.random()*100),
-            text: value,
+            text: inputValue,
             checked:false,
-            delete:false
+            delete:false,
+            date:dateValue
         }
     }
 }
